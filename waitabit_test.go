@@ -9,7 +9,7 @@ import (
 
 func TestWait_Wait(t *testing.T) {
 
-	t.Run("Simple Wait", func(t *testing.T) {
+	t.Run("Wait", func(t *testing.T) {
 		wait := NewWait(syscall.SIGTERM)
 		syscall.Kill(os.Getpid(), syscall.SIGTERM)
 		var result int

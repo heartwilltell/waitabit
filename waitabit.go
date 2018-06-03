@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// Wait struct represent
+// Wait struct represent wait functionality
 type Wait struct {
 	wg      *sync.WaitGroup
 	signals chan os.Signal
