@@ -10,18 +10,24 @@ go get -u github.com/heartwilltell/waitabit
 
 ## Usage
 
-```
+```go
 package main
 
+import (
+    "os"
+    "log"
+)
 
-func main() {   
-    
+import "github.com/heartwilltell/waitabit"
+
+
+func main() { 
+	
     // call your application here ...
     
-    wait := NewWait(os.Interrupt)
+    wait := waitabit.NewWait(os.Interrupt)
     wait.WaitWithFunc(func() {
-        logger.Debug("Bye")
+        log.Println("Bye")
     })
-    
 }
 ```
