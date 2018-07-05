@@ -1,6 +1,6 @@
 # Wait a bit
 
-<p>Tiny library for manage you application shutdown in a graceful way</p>
+Tiny library for manage you application shutdown in graceful way by catching the OS signals.
 
 ## Documentation
 
@@ -19,11 +19,12 @@ go get -u github.com/heartwilltell/waitabit
 package main
 
 import (
-    "os"
-    "log"
-)
+"log"
+"os"
 
-import "github.com/heartwilltell/waitabit"
+
+"github.com/heartwilltell/waitabit"
+)
 
 
 func main() { 
