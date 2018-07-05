@@ -24,7 +24,7 @@ func NewWait(signals ...os.Signal) (wait *Wait) {
 	}
 	signal.Notify(wait.signals, signals...)
 	wait.wg.Add(1)
-	go wait.listen()
+	wait.listen()
 	return wait
 }
 

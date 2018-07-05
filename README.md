@@ -2,6 +2,11 @@
 
 <p>Tiny library for manage you application shutdown in a graceful way</p>
 
+## Documentation
+
+[![](https://goreportcard.com/badge/github.com/heartwilltell/waitabit)](https://goreportcard.com/badge/github.com/heartwilltell/waitabit)
+[![](https://godoc.org/github.com/heartwilltell/waitabit?status.svg)](https://godoc.org/github.com/heartwilltell/waitabit)
+
 ## Installation
 
 ```bash
@@ -29,5 +34,12 @@ func main() {
     wait.WaitWithFunc(func() {
         log.Println("Bye")
     })
+    
+    // or ...
+    
+    waitabit.NewWait(os.Interrupt).WaitWithFunc(func() {
+    	log.Println("Bye")
+    })
+    
 }
 ```
