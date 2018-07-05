@@ -4,7 +4,7 @@
 
 ## Documentation
 
-[![](https://goreportcard.com/badge/github.com/heartwilltell/waitabit)](https://goreportcard.com/badge/github.com/heartwilltell/waitabit)
+[![](https://goreportcard.com/badge/github.com/heartwilltell/waitabit)](https://goreportcard.com/report/github.com/heartwilltell/waitabit)
 [![](https://godoc.org/github.com/heartwilltell/waitabit?status.svg)](https://godoc.org/github.com/heartwilltell/waitabit)
 
 ## Installation
