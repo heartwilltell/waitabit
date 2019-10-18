@@ -1,0 +1,19 @@
+name: Lint Test Build
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  lint:
+    name: Run Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint
+        run: golangci-lint run
+
+      - name: Test
+        run: go test -v -cover -race ./...
+
+      - name: Build
+          run: go build

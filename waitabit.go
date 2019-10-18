@@ -88,7 +88,7 @@ func (w *Wait) WaitWithTimeoutAndFuncErr(timeout time.Duration, function func() 
 	return nil
 }
 
-// listen a simple function that listen to the signals channel for interruption signals and then call Done() of the wait group
+// listen a simple function that listen to the signals channel for interruption signals and then call Done() of the wait group.
 func (w *Wait) listen() {
 	go func() {
 		defer w.wg.Done()
