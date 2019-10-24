@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func ExpampleWait_Wait() {
+func ExampleWait_Wait() {
 	go func() {
 		time.Sleep(500 * time.Millisecond)
 		syscall.Kill(os.Getpid(), syscall.SIGINT)
@@ -19,7 +19,7 @@ func ExpampleWait_Wait() {
 	// Output: Bye
 }
 
-func ExpampleWait_WaitWithFunc() {
+func ExampleWait_WaitWithFunc() {
 	go func() {
 		time.Sleep(500 * time.Millisecond)
 		syscall.Kill(os.Getpid(), syscall.SIGINT)
@@ -33,7 +33,7 @@ func ExpampleWait_WaitWithFunc() {
 	// Output: Bye
 }
 
-func ExpampleWait_WaitWithFuncErr() {
+func ExampleWait_WaitWithFuncErr() {
 	go func() {
 		time.Sleep(500 * time.Millisecond)
 		syscall.Kill(os.Getpid(), syscall.SIGINT)
@@ -50,7 +50,7 @@ func ExpampleWait_WaitWithFuncErr() {
 	// Output: Bye
 }
 
-func ExpampleWait_WaitWithTimeout() {
+func ExampleWait_WaitWithTimeout() {
 	go func() {
 		time.Sleep(500 * time.Millisecond)
 		syscall.Kill(os.Getpid(), syscall.SIGINT)
@@ -62,7 +62,7 @@ func ExpampleWait_WaitWithTimeout() {
 	// Output: Bye
 }
 
-func ExpampleWait_WaitWithTimeoutAndFunc() {
+func ExampleWait_WaitWithTimeoutAndFunc() {
 	go func() {
 		time.Sleep(500 * time.Millisecond)
 		syscall.Kill(os.Getpid(), syscall.SIGINT)
@@ -76,7 +76,7 @@ func ExpampleWait_WaitWithTimeoutAndFunc() {
 	// Output: Bye
 }
 
-func ExpampleWait_WaitWithTimeoutAndFuncErr() {
+func ExampleWait_WaitWithTimeoutAndFuncErr() {
 	go func() {
 		time.Sleep(500 * time.Millisecond)
 		syscall.Kill(os.Getpid(), syscall.SIGINT)
