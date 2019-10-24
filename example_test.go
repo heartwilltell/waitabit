@@ -2,7 +2,6 @@ package waitabit
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"time"
 )
@@ -10,15 +9,19 @@ import (
 func ExpampleWait() {
 	wait := NewWait(os.Interrupt)
 	wait.Wait()
-	log.Println("Bye")
+	fmt.Println("Bye")
+	// Output:
+	// Bye
 }
 
 func ExpampleWaitWithFunc() {
 	wait := NewWait(os.Interrupt)
 	wait.WaitWithFunc(func() {
 		// your logic here
-		log.Println("Bye")
+		fmt.Println("Bye")
 	})
+	// Output:
+	// Bye
 }
 
 func ExpampleWaitWithFuncErr() {
@@ -27,23 +30,29 @@ func ExpampleWaitWithFuncErr() {
 		// your logic here
 		return fmt.Errorf("something went wrong")
 	}); err != nil {
-		log.Println("something bad happened:", err)
+		fmt.Println("something bad happened:", err)
 	}
-	log.Println("Bye")
+	fmt.Println("Bye")
+	// Output:
+	// Bye
 }
 
 func ExpampleWaitWithTimeout() {
 	wait := NewWait(os.Interrupt)
 	wait.WaitWithTimeout(1 * time.Second)
-	log.Println("Bye")
+	fmt.Println("Bye")
+	// Output:
+	// Bye
 }
 
 func ExpampleWaitWithTimeoutAndFunc() {
 	wait := NewWait(os.Interrupt)
 	wait.WaitWithTimeoutAndFunc(1*time.Second, func() {
 		// your logic here
-		log.Println("Bye")
+		fmt.Println("Bye")
 	})
+	// Output:
+	// Bye
 }
 
 func ExpampleWaitWithTimeoutAndFuncErr() {
@@ -52,7 +61,9 @@ func ExpampleWaitWithTimeoutAndFuncErr() {
 		// your logic here
 		return fmt.Errorf("something went wrong")
 	}); err != nil {
-		log.Println("something bad happened:", err)
+		fmt.Println("something bad happened:", err)
 	}
-	log.Println("Bye")
+	fmt.Println("Bye")
+	// Output:
+	// Bye
 }
