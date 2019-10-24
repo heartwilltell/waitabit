@@ -53,7 +53,6 @@ linters-settings:
   errcheck:
     check-type-assertions: true
     check-blank: true
-    # a path to a file containing a list of functions to be excluded.
 
   funlen:
     lines: 60
@@ -80,57 +79,25 @@ linters-settings:
     min-complexity: 10
 
   dupl:
-    # tokens count to trigger issue, 150 by default
     threshold: 100
 
   goconst:
-    # minimal length of string constant, 3 by default
     min-len: 3
-    # minimal occurrences count to trigger, 3 by default
     min-occurrences: 3
-
-  depguard:
-    list-type: blacklist
-    include-go-root: false
-    packages:
-      - github.com/sirupsen/logrus
-    packages-with-error-messages:
-      # specify an error message to output when a blacklisted package is used
-      github.com/sirupsen/logrus: "logging is allowed only by logutils.Log"
-  misspell:
-    # Correct spellings using locale preferences for US or UK.
-    # Default is to use a neutral variety of English.
-    # Setting locale to US will correct the British spelling of 'colour' to 'color'.
-    locale: US
-    ignore-words:
-      - someword
-  lll:
-    line-length: 200
-    tab-width: 1
 
   unused:
     check-exported: false
 
   unparam:
-    # Inspect exported functions, default is false. Set to true if no external program/library imports your code.
-    # XXX: if you enable this setting, unparam will report a lot of false-positives in text editors:
-    # if it's called for subdir of a project it can't find external interfaces. All text editor integrations
-    # with golangci-lint call it on a directory with the changed file.
     check-exported: false
 
   nakedret:
-    # make an issue if func has more lines of code than this setting and it has naked returns; default is 30
     max-func-lines: 30
 
   prealloc:
-    # XXX: we don't recommend using this linter before doing performance profiling.
-    # For most programs usage of prealloc will be a premature optimization.
-
-    # Report preallocation suggestions only on simple loops that have no returns/breaks/continues/gotos in them.
-    # True by default.
     simple: true
-    range-loops: true # Report preallocation suggestions on range loops, true by default
-    for-loops: false # Report preallocation suggestions on for loops, false by default
+    range-loops: true
+    for-loops: false
 
   gocritic:
     # Which checks should be enabled; can't be combined with 'disabled-checks';
@@ -146,14 +113,6 @@ linters-settings:
     settings: # settings passed to gocritic
       captLocal: # must be valid enabled check name
         paramsOnly: true
-
-  godox:
-    # report any comments starting with keywords, this is useful for TODO or FIXME comments that
-    # might be left in the code accidentally and should be resolved before merging
-    keywords: # default keywords are TODO, BUG, and FIXME, these can be overwritten by this setting
-      - NOTE
-      - OPTIMIZE # marks code that should be optimized before merging
-      - HACK # marks hack-arounds that should be removed before merging
 
   dogsled:
     max-blank-identifiers: 2

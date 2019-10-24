@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func Expample() {
+func ExpampleWait() {
 	wait := NewWait(os.Interrupt)
 	wait.Wait()
 	log.Println("Bye")

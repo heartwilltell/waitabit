@@ -1,4 +1,4 @@
-// Package waitabit gracefully handle shutdown for your application
+// Package waitabit provides functionality for handling system interrupts.
 package waitabit
 
 import (
