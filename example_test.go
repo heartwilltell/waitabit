@@ -16,8 +16,7 @@ func ExpampleWait_Wait() {
 	wait := NewWait(os.Interrupt)
 	wait.Wait()
 	fmt.Println("Bye")
-	// Output:
-	// Bye
+	// Output: Bye
 }
 
 func ExpampleWait_WaitWithFunc() {
@@ -31,8 +30,7 @@ func ExpampleWait_WaitWithFunc() {
 		// your logic here
 		fmt.Println("Bye")
 	})
-	// Output:
-	// Bye
+	// Output: Bye
 }
 
 func ExpampleWait_WaitWithFuncErr() {
@@ -49,8 +47,7 @@ func ExpampleWait_WaitWithFuncErr() {
 		fmt.Println("something bad happened:", err)
 	}
 	fmt.Println("Bye")
-	// Output:
-	// Bye
+	// Output: Bye
 }
 
 func ExpampleWait_WaitWithTimeout() {
@@ -62,8 +59,7 @@ func ExpampleWait_WaitWithTimeout() {
 	wait := NewWait(os.Interrupt)
 	wait.WaitWithTimeout(1 * time.Second)
 	fmt.Println("Bye")
-	// Output:
-	// Bye
+	// Output: Bye
 }
 
 func ExpampleWait_WaitWithTimeoutAndFunc() {
@@ -77,8 +73,7 @@ func ExpampleWait_WaitWithTimeoutAndFunc() {
 		// your logic here
 		fmt.Println("Bye")
 	})
-	// Output:
-	// Bye
+	// Output: Bye
 }
 
 func ExpampleWait_WaitWithTimeoutAndFuncErr() {
@@ -95,6 +90,5 @@ func ExpampleWait_WaitWithTimeoutAndFuncErr() {
 		fmt.Println("something bad happened:", err)
 	}
 	fmt.Println("Bye")
-	// Output:
-	// Bye
+	// Output: Bye
 }
