@@ -9,12 +9,9 @@ jobs:
     name: Run Lint
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+        
       - name: Lint
-        run: golangci-lint run
-
-      - name: Test
-        run: go test -v -cover -race ./...
-
-      - name: Build
-        run: go build
+        uses: heartwilltell/action-golangci-lint@master
           
