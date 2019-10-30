@@ -19,11 +19,10 @@ go get -u github.com/heartwilltell/waitabit
 package main
 
 import (
-"log"
-"os"
+    "log"
+    "os"
 
-
-"github.com/heartwilltell/waitabit"
+    "github.com/heartwilltell/waitabit"
 )
 
 
