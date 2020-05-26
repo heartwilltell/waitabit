@@ -5,7 +5,7 @@ Tiny library for manage you application shutdown in graceful way by catching the
 ## Documentation
 
 [![](https://goreportcard.com/badge/github.com/heartwilltell/waitabit)](https://goreportcard.com/report/github.com/heartwilltell/waitabit)
-[![](https://godoc.org/github.com/heartwilltell/waitabit?status.svg)](https://godoc.org/github.com/heartwilltell/waitabit)
+[![](https://godoc.org/github.com/heartwilltell/waitabit?status.svg)](https://pkg.go.dev/github.com/heartwilltell/waitabit?tab=doc)
 
 ## Installation
 
