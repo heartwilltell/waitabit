@@ -2,6 +2,9 @@
 
 Tiny library for manage you application shutdown in graceful way by catching the OS signals.
 
+**⚠️ This repository is now archived. Please use `os/signal.NotifyContext` instead**
+
+
 ## Documentation
 
 [![](https://goreportcard.com/badge/github.com/heartwilltell/waitabit)](https://goreportcard.com/report/github.com/heartwilltell/waitabit)
